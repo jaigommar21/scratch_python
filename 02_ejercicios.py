@@ -41,4 +41,31 @@ print(combina)
 
 per2=Persona("Jaime","Perez","12345646")
 
+Persona("Milagros","Huaman","1234588")
+
 print(Persona.listado_de_personas)
+
+nombre = "Jaime"
+print(len(nombre))
+print(nombre.upper())
+
+
+class SesionDeClase:
+    pais = ""
+    listado_personas = []
+    def __init__(self, nombre, apellido,dni):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.dni = dni
+        SesionDeClase.listado_personas.append(nombre)
+    def datos(self):
+        return self.apellido+":"+self.dni
+sesion1 = SesionDeClase("Juan","Perez","12345678")
+sesion2 = SesionDeClase("Miguel","Gomez","10000001")
+sesion3 = SesionDeClase("Celeste","Alva","20000002")
+sesion1.datos()
+sesion2.datos()
+sesion3.datos()
+print(SesionDeClase.listado_personas)
+
+
