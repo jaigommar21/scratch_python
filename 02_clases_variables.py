@@ -39,7 +39,7 @@ print(emp_01.nombre_en_mayuscula())
 
 #'''
 
-#''' Segunda version
+''' Segunda version
 
 AUMENTO = 0.5 # Reppresenta el 10%
 
@@ -58,13 +58,13 @@ class Empleado:
 
 emp_01 = Empleado("Jaime","Gomez",1000)
 print(emp_01.sueldo)
-emp_01.incremento_sueldo()
+emp_01.incrementar_sueldo()
 #emp_01.sueldo = int(emp_01.sueldo * 1.10)
 print(emp_01.sueldo)
 
 emp_02 = Empleado("Oscar","Garcia",2000)
 print(emp_02.sueldo)
-emp_02.incremento_sueldo()
+emp_02.incrementar_sueldo()
 print(emp_02.sueldo)
 
 # Crear un método que realice el cálculo de un bono 
@@ -98,10 +98,12 @@ print("Sueldo = {}, Bono = {}".format(empleado.sueldo, bono))
 
 #'''
 
-''' Tercera version
+#''' Tercera version
 class Empleado:
-    aumento = 1.10
-    descuento = 0.95    
+    
+    aumento =   1 + 0.10  # Atributo de clase
+    descuento = 1 - 0.05  # Atributo de clase
+
     def __init__(self, nombre, apellido, sueldo):
         self.nombre = nombre
         self.apellido = apellido
@@ -110,21 +112,27 @@ class Empleado:
     def nombre_completo(self):
         return self.nombre + " " + self.apellido
 
-    def incremento_sueldo(self):
-        self.sueldo = \
-            int(self.sueldo * self.aumento)
+    def incrementar_sueldo(self):
+        self.sueldo = int(self.sueldo * self.aumento)
 
-    def descuento_sueldo(self):
-        self.sueldo = \
-            int(self.sueldo * self.descuento)
+    def descuentar_sueldo(self):
+        self.sueldo = int(self.sueldo * self.descuento)
 
 # Se instancia el objeto emp_01
 emp_01 = Empleado("Jaime","Gomez",1000)
+print("El factor de aumento = " , emp_01.aumento)
+#print(emp_01.sueldo)
+#emp_01.incrementar_sueldo()
+#print(emp_01.sueldo)
+
+emp_02 = Empleado("Juan","Garcia",1500)
+print("El factor de aumento = " , emp_02.aumento)
+
 
 # Se cambia el incremento a la instancia
 emp_01.aumento = 1.5   
 print(emp_01.sueldo)
-emp_01.incremento_sueldo()
+emp_01.incrementar_sueldo()
 print(emp_01.sueldo)
 
 # Se cambia el incremento a la clase
@@ -134,12 +142,13 @@ Empleado.aumento = 1.5
 # ya se realizo a traves de la clase Empleado
 emp_02 = Empleado("Oscar","Garcia",2000)
 print(emp_02.sueldo)
-emp_02.incremento_sueldo()
+emp_02.incrementar_sueldo()
 print(emp_02.sueldo)
 
 #print(emp_01.__dict__)
 #print(Empleado.__dict__)
 #'''
+
 
 ''' Cuarta version
 class Empleado:
