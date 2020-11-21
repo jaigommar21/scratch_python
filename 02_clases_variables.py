@@ -67,14 +67,12 @@ print(emp_02.sueldo)
 emp_02.incremento_sueldo()
 print(emp_02.sueldo)
 
-'''
+# Crear un método que realice el cálculo de un bono 
+#  - Si gana hasta 1000 soles, se le da un bono de 300
+#  - Si gana de 1001 a 2000 soles. se le da un bono de 200
+#  - Si gana mas de 2001 soles a más , se le da un bono de 100
+#
 
- Crear un método que realice el cálculo de un bono 
-  - Si gana hasta 1000 soles, se le da un bono de 300
-  - Si gana de 1001 a 2000 soles. se le da un bono de 200
-  - Si gana mas de 2001 soles a más , se le da un bono de 100
-
-'''
 class Empleado:
     
     def __init__(self, nombre, apellido, sueldo):
@@ -82,10 +80,12 @@ class Empleado:
         self.apellido = apellido
         self.sueldo = sueldo
 
+    # Reglas del negocio
     def calcular_bono(self):
         if self.sueldo <= 1000: return 300
         if 1000 < self.sueldo <= 2000 : return 200
         if self.sueldo > 2000 : return 100
+
 
 empleado = Empleado("Juan","Perez",1300)
 bono = empleado.calcular_bono() 
@@ -94,6 +94,7 @@ print("Sueldo = {}, Bono = {}".format(empleado.sueldo, bono))
 empleado = Empleado("Maria","Gomez",930)
 bono = empleado.calcular_bono() 
 print("Sueldo = {}, Bono = {}".format(empleado.sueldo, bono))
+
 
 #'''
 
