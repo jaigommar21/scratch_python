@@ -98,7 +98,7 @@ print("Sueldo = {}, Bono = {}".format(empleado.sueldo, bono))
 
 #'''
 
-#''' Tercera version
+''' Tercera version
 class Empleado:
     
     aumento =   1 + 0.10  # Atributo de clase
@@ -128,7 +128,6 @@ print("El factor de aumento = " , emp_01.aumento)
 emp_02 = Empleado("Juan","Garcia",1500)
 print("El factor de aumento = " , emp_02.aumento)
 
-
 # Se cambia el incremento a la instancia
 emp_01.aumento = 1.5   
 print(emp_01.sueldo)
@@ -150,7 +149,7 @@ print(emp_02.sueldo)
 #'''
 
 
-''' Cuarta version
+#''' Cuarta version
 class Empleado:
 
     aumento  = 1.10
