@@ -67,6 +67,18 @@ print(emp_02.sueldo)
 emp_02.incremento_sueldo()
 print(emp_02.sueldo)
 
+'''
+
+ Crear un método que realice el calculo de un bono 
+  - Si gana hasta 1000 soles, se le da un bono de 300
+  - Si gana de 1001 a 2000 soles. se le da un bono de 200
+  - Si gana mas de 2001 soles a más , se le da un bono de 100
+
+'''
+
+
+
+
 #'''
 
 ''' Tercera version
