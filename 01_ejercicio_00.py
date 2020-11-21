@@ -36,5 +36,41 @@ print("después", emp_02.cargo)
 
 #help(Empleado)
 
+'''
+- Crear la clase Empresa
+- Crear 2 instancias
+- En la 1 instancia crearle el atributo nombre y ruc .
+- En la 2 instancia crearle el atributo nombre y direccion .
+'''
+
+class Empresa:
+    pass
+
+emp01=Empresa()
+emp02=Empresa()
+
+
+emp01.nombre="SalchipapaSA"
+emp01.ruc=10457526881
+emp02.nombre="HamburguesaSA"
+emp02.direccion="av Larco,Miraflores"
+
+print(emp01.nombre)
+print(emp02.nombre)
+
+
+emps = [emp01, emp02]
+
+for emp in emps :
+    print(emp.nombre)
+
+
+
+
+
+
+
+
+
 
 
