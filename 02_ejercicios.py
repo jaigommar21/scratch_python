@@ -20,3 +20,25 @@ Crear la clase Persona
 
 '''
 
+class Persona:
+
+    pais="Perú"
+    listado_de_personas=[]
+
+    def __init__(self,nombre,apellido,dni):
+        self.nombre=nombre
+        self.apellido=apellido
+        self.dni=dni
+        Persona.listado_de_personas.append(nombre)
+
+    def obtener_info(self):
+        cadena=self.apellido+":"+self.dni
+        return cadena
+
+per1=Persona("Jorge","Garcia","52565988")
+combina=per1.obtener_info()
+print(combina)
+
+per2=Persona("Jaime","Perez","12345646")
+
+print(Persona.listado_de_personas)
