@@ -36,3 +36,13 @@ para que siempre retorne "DDD", usarlo en un instancia
 de la clase Estudiante.
 
 '''
+
+# Clase hija
+class Estudiante(Persona):
+
+    def obtener_dni(self):
+        return "DDD"
+
+
+stu_01 = Estudiante("Edson","Enriquez","123")
+print(stu_01.obtener_dni())
