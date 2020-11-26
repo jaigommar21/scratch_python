@@ -31,7 +31,7 @@ print(vec_01.obtener_dni())
 
 
 '''
-Sobrescribir el metodo obtener_dni en la clase Estudiante
+Sobrescribir el método obtener_dni en la clase Estudiante
 para que siempre retorne "DDD", usarlo en un instancia 
 de la clase Estudiante.
 
